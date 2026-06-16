@@ -1,1 +1,3 @@
-console.log("Test de ministerios cargado");
+function iniciarTest(){
+    alert("¡El test está funcionando!");
+}
