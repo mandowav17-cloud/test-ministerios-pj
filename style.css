@@ -117,6 +117,12 @@ button:hover {
     transform: scale(1.03);
 }
 
+.logo {
+    width: 120px;
+    display: block;
+    margin: 0 auto 10px auto;
+    filter: drop-shadow(0 0 10px rgba(160, 100, 255, 0.6));
+}
 /* RESULTADO */
 #resultado {
     background: rgba(255, 255, 255, 0.06);
