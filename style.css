@@ -208,3 +208,8 @@ button {
     color: white;
     font-weight: bold;
 }
+
+h1, h2 {
+    font-family: "Cinzel", serif;
+    letter-spacing: 1px;
+}
