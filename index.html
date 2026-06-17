@@ -1,83 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descubre tus dones para servir</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test PJ</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="contenedor">
-
-    <div id="inicio">
-        <div class="encabezado">
-    <img src="logo-pj.png" alt="Pastoral Juvenil" class="logo-pj">
-    <h1>Descubre tus dones para servir</h1>
-        </div>
-
-        <p>
-            Todos tenemos dones únicos que Dios nos ha regalado.
-        </p>
-
-        <p>
-            Este test te ayudará a descubrir qué ministerios de Pastoral Juvenil
-            podrían relacionarse más con tu forma de servir, tus talentos y tu personalidad.
-        </p>
-
-        <p>
-            • No existen ministerios más importantes que otros.
-        </p>
-
-        <p>
-            • Todos son necesarios para la misión.
-        </p>
-
-        <button onclick="iniciarTest()">
-            Comenzar
-        </button>
-    </div>
-
-    <div id="test" style="display:none;">
-
-        <h2 id="pregunta">
-            Pregunta
-        </h2>
-
-        <div id="opciones"></div>
-
-        <button onclick="siguientePregunta()">
-            Siguiente
-        </button>
-
-    </div>
-
- 
-<div id="resultado" style="display:none;">
-
-<h2 id="arquetipoTitulo"></h2>
-
-<p id="fraseArquetipo"></p>
-
-<p id="descripcionArquetipo"></p>
-
-<h3>Este perfil suele encontrar un hogar especial en:</h3>
-
-<p id="ministerioResultado"></p>
-
-<p id="santoResultado"></p>
-
-<p id="simboloResultado"></p>
-
-<hr>
-
-<h3>También tienes afinidad con:</h3>
-
-<p id="segundoLugar"></p>
-
-<p id="tercerLugar"></p>
-
+<div id="inicio">
+    <h1>Descubre tus dones</h1>
+    <button onclick="iniciarTest()">Comenzar</button>
 </div>
+
+<div id="test" style="display:none;">
+    <h2 id="pregunta"></h2>
+    <div id="opciones"></div>
+    <button onclick="siguientePregunta()">Siguiente</button>
+</div>
+
+<div id="resultado" style="display:none;">
+    <h2 id="arquetipoTitulo"></h2>
+    <p id="fraseArquetipo"></p>
+    <p id="descripcionArquetipo"></p>
+    <p id="ministerioResultado"></p>
+    <p id="santoResultado"></p>
+    <p id="simboloResultado"></p>
+    <p id="segundoLugar"></p>
+    <p id="tercerLugar"></p>
 </div>
 
 <script src="script.js"></script>
