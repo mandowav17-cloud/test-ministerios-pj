@@ -1,4 +1,4 @@
-const preguntas = [
+const perfiles = { ... }
 {
 pregunta: "Cuando entras a un lugar nuevo, normalmente te fijas en...",
 opciones: [
