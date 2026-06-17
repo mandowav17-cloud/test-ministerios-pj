@@ -1,3 +1,4 @@
+console.log("PREGUNTAS CARGADAS:", preguntas.length);
 alert("SCRIPT CARGADO");
 const preguntas = [
 {
