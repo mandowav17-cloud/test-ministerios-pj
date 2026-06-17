@@ -81,16 +81,28 @@ button:hover {
     margin: 12px 0;
 
     border-radius: 14px;
+
     cursor: pointer;
 
     color: #fff;
     font-size: 1.1rem;
-
     text-align: center;
 
     transition: 0.25s;
 
-    backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+.opcion:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.seleccionada {
+    background: rgba(120, 60, 255, 0.35);
+    border-color: #b07cff;
+    box-shadow: 0 0 18px rgba(160, 100, 255, 0.5);
+    transform: scale(1.03);
 }
 
 .opcion:hover {
