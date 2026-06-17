@@ -225,12 +225,71 @@ document.getElementById("resultado").style.display = "block";
 
 let ordenados = Object.entries(puntos).sort((a,b)=>b[1]-a[1]);
 
-document.getElementById("arquetipoTitulo").innerText =
-"Tu perfil principal es: " + ordenados[0][0];
+let principal = ordenados[0][0];
+
+let perfiles = {
+espiritualidad:{
+arquetipo:"Peregrino",
+ministerio:"Espiritualidad",
+santo:"San Ignacio de Loyola",
+simbolo:"🕊️ Paloma",
+frase:"Buscas sentido profundo en todo lo que haces."
+},
+pastores:{
+arquetipo:"Guía",
+ministerio:"Pastores",
+santo:"San Juan Bosco",
+simbolo:"🐑 Cayado",
+frase:"Acompañas a los demás con empatía."
+},
+caridad:{
+arquetipo:"Servidor",
+ministerio:"Caridad",
+santo:"Santa Teresa de Calcuta",
+simbolo:"❤️ Corazón",
+frase:"Sirves sin esperar nada a cambio."
+},
+alabanzas:{
+arquetipo:"Cantor",
+ministerio:"Alabanzas",
+santo:"Santa Cecilia",
+simbolo:"🎵 Música",
+frase:"Transmites alegría y fe a través de la expresión."
+},
+mercadotecnia:{
+arquetipo:"Creador",
+ministerio:"Mercadotecnia",
+santo:"San Carlo Acutis",
+simbolo:"🎨 Creatividad",
+frase:"Transformas ideas en inspiración."
+},
+tesoreria:{
+arquetipo:"Organizador",
+ministerio:"Tesorería",
+santo:"San Mateo",
+simbolo:"📊 Orden",
+frase:"Das estructura y estabilidad al grupo."
+},
+predicadores:{
+arquetipo:"Sabio",
+ministerio:"Predicadores",
+santo:"Santo Tomás de Aquino",
+simbolo:"📖 Sabiduría",
+frase:"Transmites conocimiento con claridad."
+}
+};
+
+let p = perfiles[principal];
+
+document.getElementById("arquetipoTitulo").innerText = p.arquetipo;
+document.getElementById("fraseArquetipo").innerText = p.frase;
+document.getElementById("santoResultado").innerText = "🌟 " + p.santo;
+document.getElementById("simboloResultado").innerText = "✨ " + p.simbolo;
+document.getElementById("ministerioResultado").innerText = p.ministerio;
 
 document.getElementById("segundoLugar").innerText =
-"2° afinidad: " + ordenados[1][0];
+"2° Afinidad: " + ordenados[1][0];
 
 document.getElementById("tercerLugar").innerText =
-"3° afinidad: " + ordenados[2][0];
+"3° Afinidad: " + ordenados[2][0];
 }
