@@ -151,3 +151,60 @@ button:hover {
 #cargando h2 {
     text-shadow: 0 0 10px rgba(160, 100, 255, 0.5);
 }
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(180,140,255,0.3);
+    border-radius: 20px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+    backdrop-filter: blur(10px);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.box {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 12px;
+
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 18px;
+    border-radius: 12px;
+
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #7b2ff7, #9d4edd);
+    color: white;
+    font-weight: bold;
+}
