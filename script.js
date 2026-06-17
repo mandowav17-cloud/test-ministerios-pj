@@ -232,49 +232,49 @@ espiritualidad:{
 arquetipo:"Peregrino",
 ministerio:"Espiritualidad",
 santo:"San Ignacio de Loyola",
-simbolo:"🕊️ Paloma",
+simbolo:"🕊️",
 frase:"Buscas sentido profundo en todo lo que haces."
 },
 pastores:{
 arquetipo:"Guía",
 ministerio:"Pastores",
 santo:"San Juan Bosco",
-simbolo:"🐑 Cayado",
+simbolo:"🐑",
 frase:"Acompañas a los demás con empatía."
 },
 caridad:{
 arquetipo:"Servidor",
 ministerio:"Caridad",
 santo:"Santa Teresa de Calcuta",
-simbolo:"❤️ Corazón",
+simbolo:"❤️",
 frase:"Sirves sin esperar nada a cambio."
 },
 alabanzas:{
 arquetipo:"Cantor",
 ministerio:"Alabanzas",
 santo:"Santa Cecilia",
-simbolo:"🎵 Música",
+simbolo:"🎵",
 frase:"Transmites alegría y fe a través de la expresión."
 },
 mercadotecnia:{
 arquetipo:"Creador",
 ministerio:"Mercadotecnia",
 santo:"San Carlo Acutis",
-simbolo:"🎨 Creatividad",
+simbolo:"🎨",
 frase:"Transformas ideas en inspiración."
 },
 tesoreria:{
 arquetipo:"Organizador",
 ministerio:"Tesorería",
 santo:"San Mateo",
-simbolo:"📊 Orden",
+simbolo:"📊",
 frase:"Das estructura y estabilidad al grupo."
 },
 predicadores:{
 arquetipo:"Sabio",
 ministerio:"Predicadores",
 santo:"Santo Tomás de Aquino",
-simbolo:"📖 Sabiduría",
+simbolo:"📖 ",
 frase:"Transmites conocimiento con claridad."
 }
 };
