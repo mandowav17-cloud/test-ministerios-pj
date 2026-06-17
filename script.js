@@ -1,3 +1,4 @@
+alert("SCRIPT CARGADO");
 const preguntas = [
 {
 pregunta: "Cuando entras a un lugar nuevo, normalmente te fijas en...",
