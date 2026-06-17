@@ -121,6 +121,73 @@ mostrarResultado();
 
 }
 
+const perfiles = {
+
+espiritualidad:{
+arquetipo:"🕊️ EL PEREGRINO",
+ministerio:"Ministerio de Espiritualidad",
+santo:"San Ignacio de Loyola",
+simbolo:"🕊️ Paloma",
+frase:"No buscas solo respuestas; buscas significado.",
+descripcion:"Buscas profundidad, significado y espacios para crecer interiormente."
+},
+
+pastores:{
+arquetipo:"🐑 EL GUÍA",
+ministerio:"Ministerio de Pastores",
+santo:"San Juan Bosco",
+simbolo:"🐑 Cayado",
+frase:"Tu presencia ayuda a otros a encontrar el camino.",
+descripcion:"Tienes facilidad para acompañar y hacer sentir bienvenidas a las personas."
+},
+
+caridad:{
+arquetipo:"❤️ EL SERVIDOR",
+ministerio:"Ministerio de Caridad",
+santo:"Santa Teresa de Calcuta",
+simbolo:"❤️ Corazón",
+frase:"Ves oportunidades para amar donde otros ven problemas.",
+descripcion:"Te mueve ayudar y servir a quienes más lo necesitan."
+},
+
+alabanzas:{
+arquetipo:"🎵 EL CANTOR",
+ministerio:"Ministerio de Alabanzas",
+santo:"Santa Cecilia",
+simbolo:"🎵 Nota Musical",
+frase:"La alegría es uno de tus lenguajes.",
+descripcion:"Te gusta transmitir entusiasmo, alegría y esperanza."
+},
+
+mercadotecnia:{
+arquetipo:"🎨 EL CREADOR",
+ministerio:"Ministerio de Mercadotecnia",
+santo:"San Carlo Acutis",
+simbolo:"🎨 Pincel",
+frase:"La creatividad también puede ser un camino de evangelización.",
+descripcion:"Te gusta imaginar nuevas ideas y formas de comunicar."
+},
+
+tesoreria:{
+arquetipo:"📊 EL GUARDIÁN",
+ministerio:"Ministerio de Tesorería",
+santo:"San Mateo",
+simbolo:"📊 Llave",
+frase:"Los grandes proyectos necesitan manos responsables.",
+descripcion:"Tienes facilidad para organizar y administrar recursos."
+},
+
+predicadores:{
+arquetipo:"📖 EL SABIO",
+ministerio:"Ministerio de Predicadores",
+santo:"Santo Tomás de Aquino",
+simbolo:"📖 Libro",
+frase:"Compartir la verdad es una forma de servir.",
+descripcion:"Te gusta aprender, comprender y enseñar."
+}
+
+};
+
 function mostrarResultado(){
 
 document.getElementById("test").style.display = "none";
@@ -129,14 +196,33 @@ document.getElementById("resultado").style.display = "block";
 const ordenados = Object.entries(puntos)
 .sort((a,b)=>b[1]-a[1]);
 
-document.getElementById("primerLugar").innerText =
-"🥇 " + nombreBonito(ordenados[0][0]);
+const principal = perfiles[ordenados[0][0]];
+const segundo = perfiles[ordenados[1][0]];
+const tercero = perfiles[ordenados[2][0]];
+
+document.getElementById("arquetipoTitulo").innerText =
+principal.arquetipo;
+
+document.getElementById("fraseArquetipo").innerText =
+principal.frase;
+
+document.getElementById("descripcionArquetipo").innerText =
+principal.descripcion;
+
+document.getElementById("ministerioResultado").innerText =
+principal.ministerio;
+
+document.getElementById("santoResultado").innerText =
+"🙏 Santo inspirador: " + principal.santo;
+
+document.getElementById("simboloResultado").innerText =
+"✨ Símbolo: " + principal.simbolo;
 
 document.getElementById("segundoLugar").innerText =
-"🥈 " + nombreBonito(ordenados[1][0]);
+"🥈 " + segundo.arquetipo;
 
 document.getElementById("tercerLugar").innerText =
-"🥉 " + nombreBonito(ordenados[2][0]);
+"🥉 " + tercero.arquetipo;
 
 }
 
