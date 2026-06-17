@@ -159,44 +159,78 @@ predicadores:0
 };
 
 function iniciarTest(){
-document.getElementById("inicio").style.display="none";
-document.getElementById("test").style.display="block";
+document.getElementById("inicio").style.display = "none";
+document.getElementById("test").style.display = "block";
 mostrar();
 }
 
 function mostrar(){
 let p = preguntas[i];
+
 document.getElementById("pregunta").innerText = p.pregunta;
 
 let cont = document.getElementById("opciones");
-cont.innerHTML="";
+cont.innerHTML = "";
 
-p.opciones.forEach(op=>{
-let d=document.createElement("div");
-d.innerText=op.texto;
-d.onclick=()=>{
-sel=op.ministerio;
+p.opciones.forEach(op => {
+let div = document.createElement("div");
+div.classList.add("opcion");
+div.innerText = op.texto;
+
+div.onclick = () => {
+
+sel = op.ministerio;
+
+document.querySelectorAll(".opcion")
+.forEach(o => o.classList.remove("seleccionada"));
+
+div.classList.add("seleccionada");
 };
-cont.appendChild(d);
+
+cont.appendChild(div);
 });
 }
 
 function siguientePregunta(){
-if(!sel){alert("elige");return;}
-puntos[sel]++;
-i++;
-sel=null;
-if(i<preguntas.length) mostrar();
-else resultado();
+
+if(!sel){
+alert("Selecciona una opción");
+return;
 }
 
-function resultado(){
-document.getElementById("test").style.display="none";
-document.getElementById("resultado").style.display="block";
+puntos[sel]++;
+i++;
+sel = null;
 
-let ord = Object.entries(puntos).sort((a,b)=>b[1]-a[1]);
+if(i < preguntas.length){
+mostrar();
+}else{
+mostrarCarga();
+}
+}
 
-document.getElementById("arquetipoTitulo").innerText = ord[0][0];
-document.getElementById("segundoLugar").innerText = ord[1][0];
-document.getElementById("tercerLugar").innerText = ord[2][0];
-  }
+function mostrarCarga(){
+document.getElementById("test").style.display = "none";
+document.getElementById("cargando").style.display = "block";
+
+setTimeout(() => {
+document.getElementById("cargando").style.display = "none";
+mostrarResultado();
+}, 2000);
+}
+
+function mostrarResultado(){
+
+document.getElementById("resultado").style.display = "block";
+
+let ordenados = Object.entries(puntos).sort((a,b)=>b[1]-a[1]);
+
+document.getElementById("arquetipoTitulo").innerText =
+"Tu perfil principal es: " + ordenados[0][0];
+
+document.getElementById("segundoLugar").innerText =
+"2° afinidad: " + ordenados[1][0];
+
+document.getElementById("tercerLugar").innerText =
+"3° afinidad: " + ordenados[2][0];
+}
