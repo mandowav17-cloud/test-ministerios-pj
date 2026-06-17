@@ -202,4 +202,4 @@ document.getElementById("simboloResultado").innerText = "✨ " + principal.simbo
 
 document.getElementById("segundoLugar").innerText = "🥈 " + segundo.arquetipo;
 document.getElementById("tercerLugar").innerText = "🥉 " + tercero.arquetipo;
-  }
+}
