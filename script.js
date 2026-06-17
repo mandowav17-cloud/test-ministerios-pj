@@ -229,67 +229,81 @@ let principal = ordenados[0][0];
 
 let perfiles = {
 espiritualidad:{
-arquetipo:"Peregrino",
+arquetipo:"Peregrino Espiritual",
 ministerio:"Espiritualidad",
 santo:"San Ignacio de Loyola",
 simbolo:"🕊️",
-frase:"Buscas sentido profundo en todo lo que haces."
+descripcion:"Buscas profundidad en la fe y sentido en todo lo que haces. Sueles reflexionar antes de actuar y guiarte por lo espiritual.",
+cualidades:"Reflexivo, contemplativo, buscador de sentido"
 },
 pastores:{
-arquetipo:"Guía",
+arquetipo:"Guía del Corazón",
 ministerio:"Pastores",
 santo:"San Juan Bosco",
 simbolo:"🐑",
-frase:"Acompañas a los demás con empatía."
+descripcion:"Acompañas a los demás en sus procesos personales y emocionales. Eres apoyo constante para quienes te rodean.",
+cualidades:"Empático, protector, cercano"
 },
 caridad:{
-arquetipo:"Servidor",
+arquetipo:"Servidor del Amor",
 ministerio:"Caridad",
 santo:"Santa Teresa de Calcuta",
 simbolo:"❤️",
-frase:"Sirves sin esperar nada a cambio."
+descripcion:"Tu esencia es ayudar sin esperar nada a cambio. Ves a Cristo en cada persona que necesita apoyo.",
+cualidades:"Solidario, generoso, servicial"
 },
 alabanzas:{
-arquetipo:"Cantor",
+arquetipo:"Mensajero de Alegría",
 ministerio:"Alabanzas",
 santo:"Santa Cecilia",
 simbolo:"🎵",
-frase:"Transmites alegría y fe a través de la expresión."
+descripcion:"Expresas la fe a través de la alegría, la música y el entusiasmo. Elevas el ambiente espiritual del grupo.",
+cualidades:"Expresivo, alegre, inspirador"
 },
 mercadotecnia:{
-arquetipo:"Creador",
+arquetipo:"Creador de Visión",
 ministerio:"Mercadotecnia",
 santo:"San Carlo Acutis",
 simbolo:"🎨",
-frase:"Transformas ideas en inspiración."
+descripcion:"Transformas ideas en mensajes que inspiran. Comunicas la fe de forma creativa y moderna.",
+cualidades:"Creativo, innovador, comunicador"
 },
 tesoreria:{
-arquetipo:"Organizador",
+arquetipo:"Constructor de Orden",
 ministerio:"Tesorería",
 santo:"San Mateo",
 simbolo:"📊",
-frase:"Das estructura y estabilidad al grupo."
+descripcion:"Das estabilidad al grupo organizando recursos y procesos. Tu trabajo permite que todo funcione correctamente.",
+cualidades:"Organizado, responsable, confiable"
 },
 predicadores:{
-arquetipo:"Sabio",
+arquetipo:"Portador de Sabiduría",
 ministerio:"Predicadores",
 santo:"Santo Tomás de Aquino",
-simbolo:"📖 ",
-frase:"Transmites conocimiento con claridad."
+simbolo:"📖",
+descripcion:"Transmitís la fe con claridad y profundidad. Ayudas a otros a comprender mejor la enseñanza espiritual.",
+cualidades:"Analítico, claro, educador"
 }
 };
 
 let p = perfiles[principal];
 
 document.getElementById("arquetipoTitulo").innerText = p.arquetipo;
-document.getElementById("fraseArquetipo").innerText = p.frase;
-document.getElementById("santoResultado").innerText = "🌟 " + p.santo;
-document.getElementById("simboloResultado").innerText = "✨ " + p.simbolo;
-document.getElementById("ministerioResultado").innerText = p.ministerio;
+
+document.getElementById("fraseArquetipo").innerText = p.descripcion;
+
+document.getElementById("santoResultado").innerText =
+" Inspirado en: " + p.santo;
+
+document.getElementById("simboloResultado").innerText =
+" Símbolo: " + p.simbolo;
+
+document.getElementById("ministerioResultado").innerText =
+" Ministerio: " + p.ministerio;
 
 document.getElementById("segundoLugar").innerText =
 "2° Afinidad: " + ordenados[1][0];
 
 document.getElementById("tercerLugar").innerText =
 "3° Afinidad: " + ordenados[2][0];
-}
+  }
