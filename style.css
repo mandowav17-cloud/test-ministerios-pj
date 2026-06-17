@@ -1,36 +1,50 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top, #1a0b2e, #0b0b12);
     color: #f5f5f5;
+
+    min-height: 100vh;
+
+    background: radial-gradient(circle at top,
+        #3a1b66 0%,
+        #1a0f2e 50%,
+        #0b0b12 100%
+    );
 }
 
-/* CONTENEDOR */
+/* CENTRADO GENERAL */
+html, body {
+    height: 100%;
+}
+
 .contenedor {
-    max-width: 800px;
+    max-width: 850px;
     margin: auto;
     padding: 25px;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* TITULOS MÁS GRANDES */
+/* TEXTOS */
 h1 {
     font-size: 2.2rem;
+    text-align: center;
     margin-bottom: 10px;
+    text-shadow: 0 0 12px rgba(160, 100, 255, 0.5);
 }
 
 h2 {
     font-size: 1.6rem;
-    margin-bottom: 15px;
+    text-align: center;
 }
 
-h3 {
-    font-size: 1.3rem;
-}
-
-/* TEXTO GENERAL MÁS LEGIBLE */
 p {
     font-size: 1.1rem;
     line-height: 1.7;
+    text-align: center;
 }
 
 /* BOTONES */
@@ -42,9 +56,15 @@ button {
     border-radius: 12px;
     cursor: pointer;
     margin-top: 15px;
+
     font-size: 1rem;
     font-weight: bold;
+
     transition: 0.2s;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button:hover {
@@ -52,51 +72,50 @@ button:hover {
     background: linear-gradient(135deg, #8a2be2, #4a148c);
 }
 
-/* OPCIONES (CUADRO GRIS MÍSTICO) */
+/* OPCIONES (ESTILO TARJETA MÁGICA) */
 .opcion {
-    background: rgba(180, 180, 180, 0.12); /* gris suave en vez de blanco */
+    background: rgba(255, 255, 255, 0.10);
     border: 1px solid rgba(180, 140, 255, 0.25);
-    padding: 16px;
+
+    padding: 18px;
     margin: 12px 0;
+
     border-radius: 14px;
     cursor: pointer;
-    color: #f5f5f5;
-    font-size: 1.05rem;
+
+    color: #fff;
+    font-size: 1.1rem;
+
+    text-align: center;
+
     transition: 0.25s;
-    backdrop-filter: blur(8px);
+
+    backdrop-filter: blur(10px);
 }
 
-/* HOVER */
 .opcion:hover {
-    background: rgba(200, 200, 200, 0.18);
-    border-color: rgba(180, 140, 255, 0.5);
-    transform: translateY(-2px);
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.16);
 }
 
-/* SELECCIONADA */
 .seleccionada {
-    background: rgba(106, 0, 255, 0.35);
+    background: rgba(120, 60, 255, 0.35);
     border-color: #b07cff;
-    box-shadow: 0 0 14px rgba(160, 100, 255, 0.4);
+    box-shadow: 0 0 18px rgba(160, 100, 255, 0.5);
+    transform: scale(1.03);
 }
 
 /* RESULTADO */
 #resultado {
-    background: rgba(180, 180, 180, 0.08);
+    background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(180, 140, 255, 0.2);
-    padding: 22px;
+    padding: 20px;
     border-radius: 16px;
+
     backdrop-filter: blur(10px);
 }
 
-/* EFECTO MÁGICO SUAVE */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(120, 80, 255, 0.08), transparent 60%);
-    pointer-events: none;
+/* CARGA */
+#cargando h2 {
+    text-shadow: 0 0 10px rgba(160, 100, 255, 0.5);
 }
