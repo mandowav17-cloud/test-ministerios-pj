@@ -3,28 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test de Ministerios PJ</title>
-
+    <title>Descubre tus dones para servir</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-
 <body>
 
-    <div class="contenedor">
+<div class="contenedor">
 
-        <h1>🕊️ Test de Ministerios PJ</h1>
+    <div id="inicio">
+        <h1>🌟 Descubre tus dones para servir</h1>
 
         <p>
-            Descubre qué ministerio encaja mejor con tus dones y personalidad.
+            Todos tenemos dones únicos que Dios nos ha regalado.
+        </p>
+
+        <p>
+            Este test te ayudará a descubrir qué ministerios de Pastoral Juvenil
+            podrían relacionarse más con tu forma de servir, tus talentos y tu personalidad.
+        </p>
+
+        <p>
+            ✨ No existen ministerios más importantes que otros.
+        </p>
+
+        <p>
+            ✨ Todos son necesarios para la misión de la Iglesia.
         </p>
 
         <button onclick="iniciarTest()">
             Comenzar
         </button>
+    </div>
+
+    <div id="test" style="display:none;">
+
+        <h2 id="pregunta">
+            Pregunta
+        </h2>
+
+        <div id="opciones"></div>
+
+        <button onclick="siguientePregunta()">
+            Siguiente
+        </button>
 
     </div>
 
-    <script src="script.js"></script>
+    <div id="resultado" style="display:none;">
+        <h2>🌟 Tus dones pueden florecer especialmente en:</h2>
+
+        <h3 id="primerLugar"></h3>
+        <h3 id="segundoLugar"></h3>
+        <h3 id="tercerLugar"></h3>
+
+        <p>
+            Recuerda: este resultado es una orientación para ayudarte
+            a descubrir dónde puedes amar y servir mejor.
+        </p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
