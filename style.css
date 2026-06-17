@@ -175,7 +175,7 @@ button:hover {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     padding: 25px;
 
     text-align: center;
@@ -184,6 +184,7 @@ button:hover {
 
     backdrop-filter: blur(10px);
 }
+
 
 .card h2 {
     font-size: 1.8rem;
@@ -235,4 +236,8 @@ h1, h2 {
 
 #test {
     display: none;
+}
+
+* {
+    box-sizing: border-box;
 }
