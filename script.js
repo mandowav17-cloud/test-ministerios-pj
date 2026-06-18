@@ -288,7 +288,6 @@ function mostrarResultado(){
 
 document.getElementById("test").style.display = "none";
 document.getElementById("resultado").style.display = "flex";
-document.getElementById("resultado").style.display = "block";
 
 let ordenados = Object.entries(puntos).sort((a,b)=>b[1]-a[1]);
 
@@ -348,10 +347,34 @@ arquetipo:"Portador de Sabiduría",
 ministerio:"Predicadores",
 santo:"Santo Tomás de Aquino",
 simbolo:"📖",
-descripcion:"Transmitís la fe con claridad y profundidad. Ayudas a otros a comprender mejor la enseñanza espiritual.",
+descripcion:"Transmites la fe con claridad y profundidad. Ayudas a otros a comprender mejor la enseñanza espiritual.",
 cualidades:"Analítico, claro, educador"
 }
 };
+
+let p = perfiles[principal];
+
+document.getElementById("arquetipoTitulo").innerText = p.arquetipo;
+
+document.getElementById("fraseArquetipo").innerText =
+p.descripcion;
+
+document.getElementById("santoResultado").innerText =
+"Inspirado en: " + p.santo;
+
+document.getElementById("simboloResultado").innerText =
+"Símbolo: " + p.simbolo;
+
+document.getElementById("ministerioResultado").innerText =
+"Ministerio: " + p.ministerio;
+
+document.getElementById("segundoLugar").innerText =
+"2° Afinidad: " + ordenados[1][0];
+
+document.getElementById("tercerLugar").innerText =
+"3° Afinidad: " + ordenados[2][0];
+
+}
 
 function compartirImagen() {
 
@@ -362,57 +385,17 @@ html2canvas(card, {
     scale: 2
 }).then(canvas => {
 
-    const imagen = canvas.toDataURL("image/png");
-
-    const nuevaVentana = window.open();
-
-    nuevaVentana.document.write(`
-        <html>
-        <body style="margin:0;background:#000;display:flex;justify-content:center;align-items:center;height:100vh;">
-            <img src="${imagen}" style="max-width:100%;">
-        </body>
-        </html>
-    `);
-
-});
-
-}
-
-html2canvas(card, {
-    backgroundColor: null,
-    scale: 2
-}).then(canvas => {
-
     const link = document.createElement("a");
+
     link.download = "mi-pastoral-wrapped.png";
+
     link.href = canvas.toDataURL("image/png");
+
     link.click();
 
 });
 
-  }
-let p = perfiles[principal];
-
-document.getElementById("arquetipoTitulo").innerText = p.arquetipo;
-
-document.getElementById("fraseArquetipo").innerText = p.descripcion;
-
-document.getElementById("santoResultado").innerText =
-" Inspirado en: " + p.santo;
-
-document.getElementById("simboloResultado").innerText =
-" Símbolo: " + p.simbolo;
-
-document.getElementById("ministerioResultado").innerText =
-" Ministerio: " + p.ministerio;
-
-document.getElementById("segundoLugar").innerText =
-"2° Afinidad: " + ordenados[1][0];
-
-document.getElementById("tercerLugar").innerText =
-"3° Afinidad: " + ordenados[2][0];
-  }
-
+}
 function copiarResultado(){
 
 const texto =
