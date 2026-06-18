@@ -366,8 +366,8 @@ document.getElementById("simboloResultado").innerText =
 "Símbolo: " + p.simbolo;
 
 document.getElementById("ministerioResultado").innerText =
-"Ministerio: " + p.ministerio;
-
+"Tu camino apunta hacia: " + p.ministerio;
+    
 document.getElementById("segundoLugar").innerText =
 "2° Afinidad: " + ordenados[1][0];
 
