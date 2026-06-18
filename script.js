@@ -378,24 +378,34 @@ document.getElementById("tercerLugar").innerText =
 
 function compartirImagen() {
 
-const card = document.getElementById("wrappedCard");
+    const card = document.getElementById("wrappedCard");
 
-html2canvas(card, {
-    backgroundColor: "#1a0f2e"
-    scale: 3
-}).then(canvas => {
+    setTimeout(() => {
 
-    const link = document.createElement("a");
+        html2canvas(card, {
+            scale: 3,
+            useCORS: true,
+            backgroundColor: "#1a0f2e"
+        }).then(canvas => {
 
-    link.download = "mi-pastoral-wrapped.png";
+            const link = document.createElement("a");
 
-    link.href = canvas.toDataURL("image/png");
+            link.download = "mi-pastoral-wrapped.png";
 
-    link.click();
+            link.href = canvas.toDataURL("image/png");
 
-});
+            document.body.appendChild(link);
 
-}
+            link.click();
+
+            document.body.removeChild(link);
+
+        });
+
+    }, 500);
+
+}  
+
 function copiarResultado(){
 
 const texto =
