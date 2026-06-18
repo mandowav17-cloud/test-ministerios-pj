@@ -373,16 +373,16 @@ document.getElementById("tercerLugar").innerText =
 "3° Afinidad: " + ordenados[2][0];
   }
 
-function compartirResultado(){
+function copiarResultado(){
 
-let texto =
+const texto =
 `✨ Mi Pastoral Wrapped ✨\n\n` +
-`Soy: ${document.getElementById("arquetipoTitulo").innerText}\n` +
-`${document.getElementById("fraseArquetipo").innerText}\n\n` +
-`${document.getElementById("ministerioResultado").innerText}\n` +
-`${document.getElementById("santoResultado").innerText}`;
+document.getElementById("arquetipoTitulo").innerText + "\n" +
+document.getElementById("fraseArquetipo").innerText + "\n\n" +
+document.getElementById("ministerioResultado").innerText + "\n" +
+document.getElementById("santoResultado").innerText;
 
 navigator.clipboard.writeText(texto);
 
-alert("Resultado copiado para compartir");
+alert("Copiado ✨ listo para compartir");
 }
