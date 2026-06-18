@@ -353,9 +353,30 @@ cualidades:"Analítico, claro, educador"
 }
 };
 
-  function compartirImagen(){
+function compartirImagen() {
 
 const card = document.getElementById("wrappedCard");
+
+html2canvas(card, {
+    backgroundColor: null,
+    scale: 2
+}).then(canvas => {
+
+    const imagen = canvas.toDataURL("image/png");
+
+    const nuevaVentana = window.open();
+
+    nuevaVentana.document.write(`
+        <html>
+        <body style="margin:0;background:#000;display:flex;justify-content:center;align-items:center;height:100vh;">
+            <img src="${imagen}" style="max-width:100%;">
+        </body>
+        </html>
+    `);
+
+});
+
+}
 
 html2canvas(card, {
     backgroundColor: null,
