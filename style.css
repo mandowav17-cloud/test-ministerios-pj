@@ -159,7 +159,11 @@ button:hover {
 
 #ministerioResultado,
 #santoResultado,
-#simboloResultado,
+#simboloGrande{
+    font-size:5rem;
+    margin:15px 0;
+}
+
 #segundoLugar,
 #tercerLugar{
     color:#ffffff;
