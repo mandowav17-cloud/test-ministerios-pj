@@ -185,4 +185,10 @@ button:hover {
     letter-spacing:3px;
     text-transform:uppercase;
     margin-bottom:15px;
+
+.wrapped-tag{
+    margin-top:25px;
+    color:#cdb8ff;
+    font-size:.9rem;
+}
 }
