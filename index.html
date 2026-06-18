@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Descubre tus dones</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
 </head>
 
 <body>
@@ -13,57 +22,91 @@
 
     <!-- INICIO -->
     <div id="inicio">
+
         <img src="logo-pj.png" class="logo" alt="PJ">
-        <h1> Descubre tus dones para servir</h1>
-        <p>Un pequeño test para ayudarte a reconocer cómo puedes servir mejor dentro de la comunidad.</p>
-        <button onclick="iniciarTest()">Comenzar</button>
+
+        <h1>Descubre tus dones para servir</h1>
+
+        <p>
+            Un pequeño test para ayudarte a reconocer cómo puedes servir mejor dentro de la comunidad.
+        </p>
+
+        <button onclick="iniciarTest()">
+            Comenzar
+        </button>
+
     </div>
 
     <!-- TEST -->
     <div id="test" style="display:none;">
+
         <h2 id="pregunta"></h2>
+
         <div id="opciones"></div>
-        <button onclick="siguientePregunta()">Siguiente</button>
+
+        <button onclick="siguientePregunta()">
+            Siguiente
+        </button>
+
     </div>
 
-    <!-- CARGA -->
+    <!-- PANTALLA DE CARGA -->
     <div id="cargando" style="display:none; text-align:center;">
-    <h2 class="glow"> Analizando tus dones...</h2>
-    <p class="fade">Escuchando tu llamado interior...</p>
-    <p class="fade">Descifrando tu propósito en la comunidad...</p>
+
+        <h2 class="glow">
+            Analizando tus dones...
+        </h2>
+
+        <p class="fade">
+            Escuchando tu llamado interior...
+        </p>
+
+        <p class="fade">
+            Descifrando tu propósito en la comunidad...
+        </p>
+
     </div>
+
     <!-- RESULTADO -->
-<div id="resultado" style="display:none;" class="wrap">
+    <div id="resultado" style="display:none;" class="wrap">
 
-    <div class="card" id="wrappedCard">
+        <div class="card" id="wrappedCard">
 
-        <h2 id="arquetipoTitulo"></h2>
+            <h2 id="arquetipoTitulo"></h2>
 
-        <p id="fraseArquetipo"></p>
+            <p id="fraseArquetipo"></p>
 
-        <div class="box">
-            <p id="ministerioResultado"></p>
-            <p id="santoResultado"></p>
-            <p id="simboloResultado"></p>
+            <div class="box">
+
+                <p id="ministerioResultado"></p>
+
+                <p id="santoResultado"></p>
+
+                <p id="simboloResultado"></p>
+
+            </div>
+
+            <h3>Tu huella secundaria</h3>
+
+            <p id="segundoLugar"></p>
+
+            <p id="tercerLugar"></p>
+
+            <button onclick="copiarResultado()">
+                Copiar resultado
+            </button>
+
+            <button onclick="compartirImagen()">
+                Descargar Wrapped
+            </button>
+
         </div>
 
-        <h3>Tu huella secundaria</h3>
-        <p id="segundoLugar"></p>
-        <p id="tercerLugar"></p>
-
-        <button onclick="copiarResultado()">Copiar resultado</button>
-        <button onclick="compartirImagen()">Descargar Wrapped</button>
-
-    </div>
-
-    
     </div>
 
 </div>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
