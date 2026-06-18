@@ -399,6 +399,9 @@ function compartirImagen() {
             link.click();
 
             document.body.removeChild(link);
+            
+            document.getElementById("simboloGrande").innerText =
+p.simbolo;
 
         });
 
