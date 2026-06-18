@@ -381,8 +381,8 @@ function compartirImagen() {
 const card = document.getElementById("wrappedCard");
 
 html2canvas(card, {
-    backgroundColor: null,
-    scale: 2
+    backgroundColor: "#1a0f2e"
+    scale: 3
 }).then(canvas => {
 
     const link = document.createElement("a");
