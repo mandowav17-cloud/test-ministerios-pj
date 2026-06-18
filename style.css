@@ -178,3 +178,11 @@ button:hover {
     color:white;
     margin-top:25px;
 }
+
+.wrapped-label{
+    color:#d8c3ff;
+    font-size:.9rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
