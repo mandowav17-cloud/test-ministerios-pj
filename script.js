@@ -286,6 +286,8 @@ mostrarResultado();
 
 function mostrarResultado(){
 
+document.getElementById("test").style.display = "none";
+document.getElementById("resultado").style.display = "flex";
 document.getElementById("resultado").style.display = "block";
 
 let ordenados = Object.entries(puntos).sort((a,b)=>b[1]-a[1]);
@@ -351,6 +353,23 @@ cualidades:"Analítico, claro, educador"
 }
 };
 
+  function compartirImagen(){
+
+const card = document.getElementById("wrappedCard");
+
+html2canvas(card, {
+    backgroundColor: null,
+    scale: 2
+}).then(canvas => {
+
+    const link = document.createElement("a");
+    link.download = "mi-pastoral-wrapped.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+
+});
+
+  }
 let p = perfiles[principal];
 
 document.getElementById("arquetipoTitulo").innerText = p.arquetipo;
