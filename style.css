@@ -101,3 +101,14 @@ button {
     color:#cdb8ff;
     font-size:.85rem;
 }
+
+/* ===================== */
+/* LOGO PJ */
+/* ===================== */
+
+.logo{
+    width: clamp(90px, 18vw, 160px);
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+}
