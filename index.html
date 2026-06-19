@@ -1,119 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Descubre tus dones</title>
+<title>PJ Wrapped</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-
 </head>
 
 <body>
 
 <div class="contenedor">
 
-    <!-- INICIO -->
-    <div id="inicio">
+<!-- INICIO -->
+<section id="inicio">
+    <img src="logo-pj.png" class="logo" alt="PJ Logo">
 
-        <img src="logo-pj.png" class="logo" alt="PJ">
+    <h1>PJ Wrapped</h1>
+    <p>Descubre cómo sirves dentro de la comunidad</p>
 
-        <h1>Descubre tus dones para servir</h1>
+    <button onclick="iniciarTest()">Comenzar</button>
+</section>
 
-        <p>
-            Un pequeño test para ayudarte a reconocer cómo puedes servir mejor dentro de la comunidad.
-        </p>
+<!-- TEST -->
+<section id="test" style="display:none;">
+    <h2 id="pregunta"></h2>
+    <div id="opciones"></div>
+    <button onclick="siguientePregunta()">Siguiente</button>
+</section>
 
-        <button onclick="iniciarTest()">
-            Comenzar
-        </button>
+<!-- CARGA -->
+<section id="cargando" style="display:none; text-align:center;">
+    <h2>Analizando tu llamado...</h2>
+    <p>Procesando tu perfil espiritual...</p>
+</section>
 
-    </div>
+<!-- RESULTADO -->
+<section id="resultado" style="display:none;" class="wrap">
 
-    <!-- TEST -->
-    <div id="test" style="display:none;">
+    <div class="card" id="wrappedCard">
 
-        <h2 id="pregunta"></h2>
+        <p class="wrapped-label">✨ PJ WRAPPED ✨</p>
 
-        <div id="opciones"></div>
+        <h2 id="arquetipoTitulo"></h2>
 
-        <button onclick="siguientePregunta()">
-            Siguiente
-        </button>
+        <div id="simboloGrande"></div>
 
-    </div>
+        <p id="fraseArquetipo"></p>
 
-    <!-- PANTALLA DE CARGA -->
-    <div id="cargando" style="display:none; text-align:center;">
-
-        <h2 class="glow">
-            Analizando tus dones...
-        </h2>
-
-        <p class="fade">
-            Escuchando tu llamado interior...
-        </p>
-
-        <p class="fade">
-            Descifrando tu propósito en la comunidad...
-        </p>
-
-    </div>
-
-    <!-- RESULTADO -->
-    <div id="resultado" style="display:none;" class="wrap">
-        
-<p class="wrapped-label">✨ PJ WRAPPED ✨</p>
-        
-        <div class="card" id="wrappedCard">
-
-            <h2 id="arquetipoTitulo"></h2>
-            
-            <div id="simboloGrande"></div>
-
-            <p id="fraseArquetipo"></p>
-
-            <div class="box">
-
-                <p id="ministerioResultado"></p>
-
-                <p id="santoResultado"></p>
-
-                <p id="simboloResultado"></p>
-
-            </div>
-
-            <h3>Tu huella secundaria</h3>
-
-            <p id="segundoLugar"></p>
-
-            <p id="tercerLugar"></p>
-
-            <button onclick="copiarResultado()">
-                Copiar resultado
-            </button>
-
-            <button onclick="compartirImagen()">
-                Descargar Wrapped
-            </button>
-
+        <div class="box">
+            <p id="ministerioResultado"></p>
+            <p id="santoResultado"></p>
+            <p id="simboloResultado"></p>
         </div>
 
+        <h3>Tu huella secundaria</h3>
+        <p id="segundoLugar"></p>
+        <p id="tercerLugar"></p>
+
+        <button onclick="copiarResultado()">Copiar resultado</button>
+        <button onclick="compartirImagen()">Descargar Wrapped</button>
+
+        <p class="wrapped-tag">#PJWrapped #MiLugarEnLaMision</p>
+
     </div>
+
+</section>
 
 </div>
 
 <script src="script.js"></script>
-    <p class="wrapped-tag">
-#PJWrapped • #MiLugarEnLaMision
-    </p>
-
 </body>
 </html>
