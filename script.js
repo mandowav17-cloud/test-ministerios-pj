@@ -1,3 +1,7 @@
+/* =========================
+   PREGUNTAS
+========================= */
+
 const preguntas = [
 
 {
@@ -210,10 +214,14 @@ opciones: [
 
 ];
 
-let i = 0;
-let sel = null;
+/* =========================
+   VARIABLES
+========================= */
 
-let puntos = {
+let i=0;
+let sel=null;
+
+let puntos={
 espiritualidad:0,
 pastores:0,
 caridad:0,
@@ -223,31 +231,39 @@ tesoreria:0,
 predicadores:0
 };
 
+/* =========================
+   INICIO
+========================= */
+
 function iniciarTest(){
-document.getElementById("inicio").style.display = "none";
-document.getElementById("test").style.display = "block";
+document.getElementById("inicio").style.display="none";
+document.getElementById("test").style.display="block";
 mostrar();
 }
 
+/* =========================
+   MOSTRAR PREGUNTA
+========================= */
+
 function mostrar(){
-let p = preguntas[i];
 
-document.getElementById("pregunta").innerText = p.pregunta;
+let p=preguntas[i];
 
-let cont = document.getElementById("opciones");
-cont.innerHTML = "";
+document.getElementById("pregunta").innerText=p.pregunta;
 
-p.opciones.forEach(op => {
-let div = document.createElement("div");
+let cont=document.getElementById("opciones");
+cont.innerHTML="";
+
+p.opciones.forEach(op=>{
+let div=document.createElement("div");
 div.classList.add("opcion");
-div.innerText = op.texto;
+div.innerText=op.texto;
 
-div.onclick = () => {
-
-sel = op.ministerio;
+div.onclick=()=>{
+sel=op.ministerio;
 
 document.querySelectorAll(".opcion")
-.forEach(o => o.classList.remove("seleccionada"));
+.forEach(o=>o.classList.remove("seleccionada"));
 
 div.classList.add("seleccionada");
 };
@@ -255,6 +271,10 @@ div.classList.add("seleccionada");
 cont.appendChild(div);
 });
 }
+
+/* =========================
+   SIGUIENTE
+========================= */
 
 function siguientePregunta(){
 
@@ -265,160 +285,125 @@ return;
 
 puntos[sel]++;
 i++;
-sel = null;
+sel=null;
 
-if(i < preguntas.length){
+if(i<preguntas.length){
 mostrar();
 }else{
-mostrarCarga();
-}
-}
-
-function mostrarCarga(){
-document.getElementById("test").style.display = "none";
-document.getElementById("cargando").style.display = "block";
-
-setTimeout(() => {
-document.getElementById("cargando").style.display = "none";
 mostrarResultado();
-}, 2000);
 }
+}
+
+/* =========================
+   RESULTADO
+========================= */
 
 function mostrarResultado(){
 
-document.getElementById("test").style.display = "none";
-document.getElementById("resultado").style.display = "flex";
+document.getElementById("test").style.display="none";
+document.getElementById("resultado").style.display="flex";
 
-let ordenados = Object.entries(puntos).sort((a,b)=>b[1]-a[1]);
+let ordenados=Object.entries(puntos).sort((a,b)=>b[1]-a[1]);
+let principal=ordenados[0][0];
 
-let principal = ordenados[0][0];
-
-let perfiles = {
+let perfiles={
 espiritualidad:{
 arquetipo:"Peregrino Espiritual",
 ministerio:"Espiritualidad",
 santo:"San Ignacio de Loyola",
 simbolo:"🕊️",
-descripcion:"Buscas profundidad en la fe y sentido en todo lo que haces. Sueles reflexionar antes de actuar y guiarte por lo espiritual.",
-cualidades:"Reflexivo, contemplativo, buscador de sentido"
+descripcion:"Buscas profundidad y sentido."
 },
 pastores:{
 arquetipo:"Guía del Corazón",
 ministerio:"Pastores",
 santo:"San Juan Bosco",
 simbolo:"🐑",
-descripcion:"Acompañas a los demás en sus procesos personales y emocionales. Eres apoyo constante para quienes te rodean.",
-cualidades:"Empático, protector, cercano"
+descripcion:"Acompañas a las personas."
 },
 caridad:{
 arquetipo:"Servidor del Amor",
 ministerio:"Caridad",
 santo:"Santa Teresa de Calcuta",
 simbolo:"❤️",
-descripcion:"Tu esencia es ayudar sin esperar nada a cambio. Ves a Cristo en cada persona que necesita apoyo.",
-cualidades:"Solidario, generoso, servicial"
+descripcion:"Sirves con amor."
 },
 alabanzas:{
 arquetipo:"Mensajero de Alegría",
 ministerio:"Alabanzas",
 santo:"Santa Cecilia",
 simbolo:"🎵",
-descripcion:"Expresas la fe a través de la alegría, la música y el entusiasmo. Elevas el ambiente espiritual del grupo.",
-cualidades:"Expresivo, alegre, inspirador"
+descripcion:"Expresas alegría."
 },
 mercadotecnia:{
 arquetipo:"Creador de Visión",
 ministerio:"Mercadotecnia",
 santo:"San Carlo Acutis",
 simbolo:"🎨",
-descripcion:"Transformas ideas en mensajes que inspiran. Comunicas la fe de forma creativa y moderna.",
-cualidades:"Creativo, innovador, comunicador"
+descripcion:"Creas ideas."
 },
 tesoreria:{
 arquetipo:"Constructor de Orden",
 ministerio:"Tesorería",
 santo:"San Mateo",
 simbolo:"📊",
-descripcion:"Das estabilidad al grupo organizando recursos y procesos. Tu trabajo permite que todo funcione correctamente.",
-cualidades:"Organizado, responsable, confiable"
+descripcion:"Organizas todo."
 },
 predicadores:{
 arquetipo:"Portador de Sabiduría",
 ministerio:"Predicadores",
 santo:"Santo Tomás de Aquino",
 simbolo:"📖",
-descripcion:"Transmites la fe con claridad y profundidad. Ayudas a otros a comprender mejor la enseñanza espiritual.",
-cualidades:"Analítico, claro, educador"
+descripcion:"Enseñas la fe."
 }
 };
 
-let p = perfiles[principal];
+let p=perfiles[principal];
 
-document.getElementById("arquetipoTitulo").innerText = p.arquetipo;
+document.getElementById("arquetipoTitulo").innerText=p.arquetipo;
+document.getElementById("fraseArquetipo").innerText=p.descripcion;
+document.getElementById("simboloGrande").innerText=p.simbolo;
 
-document.getElementById("fraseArquetipo").innerText =
-p.descripcion;
+document.getElementById("ministerioResultado").innerText=p.ministerio;
+document.getElementById("santoResultado").innerText=p.santo;
+document.getElementById("simboloResultado").innerText=p.simbolo;
 
-document.getElementById("santoResultado").innerText =
-"Inspirado en: " + p.santo;
-
-document.getElementById("simboloResultado").innerText =
-"Símbolo: " + p.simbolo;
-
-document.getElementById("ministerioResultado").innerText =
-"Tu camino apunta hacia: " + p.ministerio;
-    
-document.getElementById("segundoLugar").innerText =
-"2° Afinidad: " + ordenados[1][0];
-
-document.getElementById("tercerLugar").innerText =
-"3° Afinidad: " + ordenados[2][0];
-
+document.getElementById("segundoLugar").innerText="2°: "+ordenados[1][0];
+document.getElementById("tercerLugar").innerText="3°: "+ordenados[2][0];
 }
 
-function compartirImagen() {
+/* =========================
+   DESCARGA WRAPPED
+========================= */
 
-    const card = document.getElementById("wrappedCard");
+function compartirImagen(){
 
-    setTimeout(() => {
+const card=document.getElementById("wrappedCard");
 
-        html2canvas(card, {
-            scale: 3,
-            useCORS: true,
-            backgroundColor: "#1a0f2e"
-        }).then(canvas => {
+html2canvas(card,{
+scale:3,
+backgroundColor:"#24133a"
+}).then(canvas=>{
 
-            const link = document.createElement("a");
+let link=document.createElement("a");
+link.download="PJ-Wrapped.png";
+link.href=canvas.toDataURL("image/png");
+link.click();
 
-            link.download = "mi-pastoral-wrapped.png";
+});
+}
 
-            link.href = canvas.toDataURL("image/png");
-
-            document.body.appendChild(link);
-
-            link.click();
-
-            document.body.removeChild(link);
-            
-            document.getElementById("simboloGrande").innerText =
-p.simbolo;
-
-        });
-
-    }, 500);
-
-}  
+/* =========================
+   COPIAR
+========================= */
 
 function copiarResultado(){
 
-const texto =
-`✨ Mi Pastoral Wrapped ✨\n\n` +
-document.getElementById("arquetipoTitulo").innerText + "\n" +
-document.getElementById("fraseArquetipo").innerText + "\n\n" +
-document.getElementById("ministerioResultado").innerText + "\n" +
-document.getElementById("santoResultado").innerText;
+const texto=
+`✨ PJ WRAPPED ✨\n\n`+
+document.getElementById("arquetipoTitulo").innerText+"\n"+
+document.getElementById("fraseArquetipo").innerText;
 
 navigator.clipboard.writeText(texto);
-
-alert("Copiado ✨ listo para compartir");
+alert("Copiado");
 }
