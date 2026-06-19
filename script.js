@@ -386,21 +386,27 @@ document.getElementById("tercerLugar").innerText="3°: "+ordenados[2][0];
    DESCARGA WRAPPED
 ========================= */
 
-function compartirImagen(){
+function compartirImagen() {
 
-const card=document.getElementById("wrappedCard");
+const card = document.getElementById("wrappedCard");
 
-html2canvas(card,{
-scale:3,
-backgroundColor:"#24133a"
-}).then(canvas=>{
+setTimeout(() => {
 
-let link=document.createElement("a");
-link.download="PJ-Wrapped.png";
-link.href=canvas.toDataURL("image/png");
+html2canvas(card, {
+scale: 3,
+backgroundColor: null,
+useCORS: true
+}).then(canvas => {
+
+const link = document.createElement("a");
+link.download = "PJ-Wrapped.png";
+link.href = canvas.toDataURL("image/png");
 link.click();
 
 });
+
+}, 600);
+
 }
 
 /* =========================
