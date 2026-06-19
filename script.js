@@ -355,6 +355,16 @@ ministerio:"Predicadores",
 santo:"Santo Tomás de Aquino",
 simbolo:"📖",
 descripcion:"Enseñas la fe."
+   let color = coloresMinisterio[principal];
+
+document.getElementById("wrappedCard").style.border = `1px solid ${color}`;
+
+document.getElementById("simboloGrande").style.color = color;
+
+document.querySelector(".wrapped-label").style.color = color;
+
+document.body.style.background =
+`radial-gradient(circle at top, ${color} 0%, #1a0f2e 60%, #0b0b12 100%)`;
 }
 };
 
@@ -407,3 +417,13 @@ document.getElementById("fraseArquetipo").innerText;
 navigator.clipboard.writeText(texto);
 alert("Copiado");
 }
+
+const coloresMinisterio = {
+espiritualidad: "#3a7bd5",
+pastores: "#4cd137",
+caridad: "#e84118",
+alabanzas: "#fbc531",
+mercadotecnia: "#9c88ff",
+tesoreria: "#00a8ff",
+predicadores: "#8c7ae6"
+};
