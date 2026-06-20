@@ -132,3 +132,48 @@ button {
         transform: scale(1);
     }
 }
+
+/* =========================
+   SELECTOR DE COLORES
+========================= */
+
+.selector-colores{
+display:flex;
+justify-content:center;
+gap:12px;
+margin:20px 0;
+flex-wrap:wrap;
+}
+
+.color-btn{
+width:42px;
+height:42px;
+border-radius:50%;
+cursor:pointer;
+border:3px solid white;
+transition:.2s;
+}
+
+.color-btn:hover{
+transform:scale(1.15);
+}
+
+.morado{
+background:#7b2ff7;
+}
+
+.azul{
+background:#3a7bd5;
+}
+
+.verde{
+background:#4cd137;
+}
+
+.rojo{
+background:#e84118;
+}
+
+.dorado{
+background:#fbc531;
+}
