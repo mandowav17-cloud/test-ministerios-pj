@@ -468,3 +468,26 @@ document.getElementById("fraseArquetipo").innerText;
 navigator.clipboard.writeText(texto);
 alert("Copiado");
 }
+
+function cambiarColor(color){
+
+document.getElementById("wrappedCard").style.border =
+`2px solid ${color}`;
+
+document.getElementById("simboloGrande").style.color =
+color;
+
+const label =
+document.querySelector(".wrapped-label");
+
+if(label){
+label.style.color = color;
+}
+
+document.body.style.background =
+`radial-gradient(circle at top,
+${color} 0%,
+#1a0f2e 60%,
+#0b0b12 100%)`;
+
+}
