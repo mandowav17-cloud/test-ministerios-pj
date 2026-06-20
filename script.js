@@ -310,13 +310,15 @@ mostrarResultado();
 
 function mostrarResultado(){
 
-document.getElementById("test").style.display="none";
-document.getElementById("resultado").style.display="flex";
+document.getElementById("test").style.display = "none";
+document.getElementById("resultado").style.display = "flex";
 
-let ordenados=Object.entries(puntos).sort((a,b)=>b[1]-a[1]);
-let principal=ordenados[0][0];
+let ordenados = Object.entries(puntos).sort((a,b)=>b[1]-a[1]);
 
-let perfiles={
+let principal = ordenados[0][0];
+
+let perfiles = {
+
 espiritualidad:{
 arquetipo:"Peregrino Espiritual",
 ministerio:"Espiritualidad",
@@ -324,6 +326,7 @@ santo:"San Ignacio de Loyola",
 simbolo:"🕊️",
 descripcion:"Buscas profundidad y sentido."
 },
+
 pastores:{
 arquetipo:"Guía del Corazón",
 ministerio:"Pastores",
@@ -331,6 +334,7 @@ santo:"San Juan Bosco",
 simbolo:"🐑",
 descripcion:"Acompañas a las personas."
 },
+
 caridad:{
 arquetipo:"Servidor del Amor",
 ministerio:"Caridad",
@@ -338,6 +342,7 @@ santo:"Santa Teresa de Calcuta",
 simbolo:"❤️",
 descripcion:"Sirves con amor."
 },
+
 alabanzas:{
 arquetipo:"Mensajero de Alegría",
 ministerio:"Alabanzas",
@@ -345,6 +350,7 @@ santo:"Santa Cecilia",
 simbolo:"🎵",
 descripcion:"Expresas alegría."
 },
+
 mercadotecnia:{
 arquetipo:"Creador de Visión",
 ministerio:"Mercadotecnia",
@@ -352,6 +358,7 @@ santo:"San Carlo Acutis",
 simbolo:"🎨",
 descripcion:"Creas ideas."
 },
+
 tesoreria:{
 arquetipo:"Constructor de Orden",
 ministerio:"Tesorería",
@@ -359,39 +366,66 @@ santo:"San Mateo",
 simbolo:"📊",
 descripcion:"Organizas todo."
 },
+
 predicadores:{
 arquetipo:"Portador de Sabiduría",
 ministerio:"Predicadores",
 santo:"Santo Tomás de Aquino",
 simbolo:"📖",
 descripcion:"Enseñas la fe."
-   
-let p=perfiles[principal];
-
-document.getElementById("arquetipoTitulo").innerText=p.arquetipo;
-document.getElementById("fraseArquetipo").innerText=p.descripcion;
-document.getElementById("simboloGrande").innerText=p.simbolo;
-
-document.getElementById("ministerioResultado").innerText=p.ministerio;
-document.getElementById("santoResultado").innerText=p.santo;
-document.getElementById("simboloResultado").innerText=p.simbolo;
-
-document.getElementById("segundoLugar").innerText="2°: "+ordenados[1][0];
-document.getElementById("tercerLugar").innerText="3°: "+ordenados[2][0];
 }
+
+};
+
+let p = perfiles[principal];
+
+document.getElementById("arquetipoTitulo").innerText =
+p.arquetipo;
+
+document.getElementById("fraseArquetipo").innerText =
+p.descripcion;
+
+document.getElementById("simboloGrande").innerText =
+p.simbolo;
+
+document.getElementById("ministerioResultado").innerText =
+p.ministerio;
+
+document.getElementById("santoResultado").innerText =
+p.santo;
+
+document.getElementById("simboloResultado").innerText =
+p.simbolo;
+
+document.getElementById("segundoLugar").innerText =
+"2° Afinidad: " + ordenados[1][0];
+
+document.getElementById("tercerLugar").innerText =
+"3° Afinidad: " + ordenados[2][0];
+
+/* COLORES AUTOMÁTICOS */
 
 let color = coloresMinisterio[principal];
 
-document.getElementById("wrappedCard").style.border = `1px solid ${color}`;
+document.getElementById("wrappedCard").style.border =
+`2px solid ${color}`;
 
-document.getElementById("simboloGrande").style.color = color;
+document.getElementById("simboloGrande").style.color =
+color;
 
-document.querySelector(".wrapped-label").style.color = color;
+const label = document.querySelector(".wrapped-label");
+
+if(label){
+label.style.color = color;
+}
 
 document.body.style.background =
-`radial-gradient(circle at top, ${color} 0%, #1a0f2e 60%, #0b0b12 100%)`;
+`radial-gradient(circle at top,
+${color} 0%,
+#1a0f2e 60%,
+#0b0b12 100%)`;
+
 }
-};
 
 /* =========================
    DESCARGA WRAPPED
