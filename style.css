@@ -234,3 +234,17 @@ font-weight:bold;
 letter-spacing:2px;
 
 }
+
+.pj-link{
+display:block;
+margin-top:15px;
+color:#ffffff;
+text-decoration:none;
+font-weight:bold;
+opacity:.8;
+}
+
+.pj-link:hover{
+opacity:1;
+text-decoration:underline;
+}
