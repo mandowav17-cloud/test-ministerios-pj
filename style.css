@@ -248,3 +248,11 @@ opacity:.8;
 opacity:1;
 text-decoration:underline;
 }
+
+.disclaimer{
+font-size:.75rem;
+opacity:.6;
+margin-top:15px;
+line-height:1.4;
+text-align:center;
+}
