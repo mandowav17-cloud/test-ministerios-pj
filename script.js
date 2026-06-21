@@ -491,3 +491,11 @@ ${color} 0%,
 #0b0b12 100%)`;
 
 }
+
+
+document.getElementById("wrappedCard").style.background =
+`linear-gradient(
+180deg,
+${color}22 0%,
+#24133a 100%
+)`;
