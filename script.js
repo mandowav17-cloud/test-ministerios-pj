@@ -418,6 +418,9 @@ document.getElementById("segundoLugar").innerText =
 
 document.getElementById("tercerLugar").innerText =
 "3° Afinidad: " + ordenados[2][0];
+   
+document.getElementById("arquetipoTitulo").style.textShadow =
+`0 0 20px ${color}`;
 
 /* COLORES AUTOMÁTICOS */
 
