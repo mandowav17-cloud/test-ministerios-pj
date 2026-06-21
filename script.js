@@ -438,24 +438,49 @@ ${color} 0%,
 
 function compartirImagen() {
 
-const card = document.getElementById("resultado");
+const botones =
+document.querySelectorAll("button");
 
-setTimeout(() => {
+const selector =
+document.querySelector(".selector-colores");
 
-html2canvas(card, {
-scale: 3,
-backgroundColor: colorActual,
-useCORS: true
-}).then(canvas => {
-
-const link = document.createElement("a");
-link.download = "PJ-Wrapped.png";
-link.href = canvas.toDataURL("image/png");
-link.click();
-
+botones.forEach(b=>{
+b.style.display="none";
 });
 
-}, 600);
+if(selector){
+selector.style.display="none";
+}
+
+const card =
+document.getElementById("wrappedCard");
+
+html2canvas(card,{
+scale:4,
+useCORS:true,
+backgroundColor:null
+})
+.then(canvas=>{
+
+const link =
+document.createElement("a");
+
+link.download="PJ-Wrapped.png";
+
+link.href =
+canvas.toDataURL("image/png");
+
+link.click();
+
+botones.forEach(b=>{
+b.style.display="";
+});
+
+if(selector){
+selector.style.display="flex";
+}
+
+});
 
 }
 
