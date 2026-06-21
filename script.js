@@ -418,14 +418,13 @@ document.getElementById("segundoLugar").innerText =
 
 document.getElementById("tercerLugar").innerText =
 "3° Afinidad: " + ordenados[2][0];
-   
-document.getElementById("arquetipoTitulo").style.textShadow =
-`0 0 20px ${color}`;
 
 /* COLORES AUTOMÁTICOS */
 
 let color = coloresMinisterio[principal];
-
+   
+document.getElementById("arquetipoTitulo").style.textShadow =
+`0 0 20px ${color}`;
 
 colorActual = color;
 
@@ -496,19 +495,7 @@ b.style.display="";
 if(selector){
 selector.style.display="flex";
 }
- const disclaimer =
-document.querySelector(".disclaimer");
-
-if(disclaimer){
-disclaimer.style.display="none";
-}
-
-const botones =
-document.querySelectorAll("button");
-
-botones.forEach(b=>{
-b.style.display="none";
-}
+ 
 });
 
 }
