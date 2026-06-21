@@ -469,7 +469,7 @@ selector.style.display="none";
 }
 
 const card =
-document.getElementById("wrappedCard");
+document.getElementById("resultado");
 
 html2canvas(card,{
 scale:4,
