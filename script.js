@@ -407,7 +407,8 @@ document.getElementById("tercerLugar").innerText =
 /* COLORES AUTOMÁTICOS */
 
 let color = coloresMinisterio[principal];
-   
+
+
 colorActual = color;
 
 document.getElementById("wrappedCard").style.border =
@@ -442,8 +443,9 @@ setTimeout(() => {
 
 html2canvas(card, {
 scale: 3,
-backgroundColor: null,
+backgroundColor: colorActual,
 useCORS: true
+})
 }).then(canvas => {
 
 const link = document.createElement("a");
@@ -474,6 +476,8 @@ alert("Copiado");
 
 function cambiarColor(color){
 
+colorActual = color;
+
 document.getElementById("wrappedCard").style.border =
 `2px solid ${color}`;
 
@@ -500,10 +504,3 @@ ${color} 0%,
 #1a0f2e 60%,
 #0b0b12 100%)`;
 }
-
-document.getElementById("wrappedCard").style.background =
-`linear-gradient(
-180deg,
-${color}22 0%,
-#24133a 100%
-)`;
