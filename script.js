@@ -474,7 +474,7 @@ document.getElementById("wrappedCard");
 html2canvas(card,{
 scale:4,
 useCORS:true,
-backgroundColor:null
+backgroundColor:"#1a0f2e"
 })
 .then(canvas=>{
 
