@@ -433,7 +433,8 @@ ${color} 0%,
 
 function compartirImagen() {
 
-const card = document.getElementById("wrappedCard");
+const card =
+document.getElementById("resultado");
 
 setTimeout(() => {
 
