@@ -407,6 +407,8 @@ document.getElementById("tercerLugar").innerText =
 /* COLORES AUTOMÁTICOS */
 
 let color = coloresMinisterio[principal];
+   
+colorActual = color;
 
 document.getElementById("wrappedCard").style.border =
 `2px solid ${color}`;
