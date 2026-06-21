@@ -486,6 +486,12 @@ if(disclaimer){
 disclaimer.style.display="none";
 }
 
+const botones =
+document.querySelectorAll("button");
+
+botones.forEach(b=>{
+b.style.display="none";
+}
 });
 
 }
