@@ -315,9 +315,23 @@ function mostrarResultado(){
 document.getElementById("test").style.display = "none";
 document.getElementById("resultado").style.display = "flex";
 
+const card = document.getElementById("wrappedCard");
+
+card.style.opacity = "0";
+card.style.transform = "translateY(20px)";
+card.style.transition = "all 0.8s ease";
+
+setTimeout(() => {
+card.style.opacity = "1";
+card.style.transform = "translateY(0)";
+}, 300);
+
 let ordenados = Object.entries(puntos).sort((a,b)=>b[1]-a[1]);
 
 let principal = ordenados[0][0];
+
+let total = Object.values(puntos).reduce((a,b)=>a+b,0);
+let porcentaje = Math.round((puntos[principal] / total) * 100);
 
 let perfiles = {
 
@@ -382,7 +396,7 @@ descripcion:"Enseñas la fe."
 let p = perfiles[principal];
 
 document.getElementById("arquetipoTitulo").innerText =
-p.arquetipo;
+`${porcentaje}% ${p.arquetipo}`;
 
 document.getElementById("fraseArquetipo").innerText =
 p.descripcion;
