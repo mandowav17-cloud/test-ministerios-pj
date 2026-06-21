@@ -239,6 +239,7 @@ alabanzas: "#fbc531",
 mercadotecnia: "#9c88ff",
 tesoreria: "#00a8ff",
 predicadores: "#8c7ae6"
+let colorActual = "#7b2ff7";
 };
 
 /* =========================
