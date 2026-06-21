@@ -477,6 +477,13 @@ document.getElementById("wrappedCard").style.border =
 document.getElementById("simboloGrande").style.color =
 color;
 
+document.getElementById("wrappedCard").style.background =
+`linear-gradient(
+180deg,
+${color}22 0%,
+#24133a 100%
+)`;
+
 const label =
 document.querySelector(".wrapped-label");
 
@@ -491,11 +498,3 @@ ${color} 0%,
 #0b0b12 100%)`;
 
 }
-
-
-document.getElementById("wrappedCard").style.background =
-`linear-gradient(
-180deg,
-${color}22 0%,
-#24133a 100%
-)`;
