@@ -479,6 +479,12 @@ b.style.display="";
 if(selector){
 selector.style.display="flex";
 }
+ const disclaimer =
+document.querySelector(".disclaimer");
+
+if(disclaimer){
+disclaimer.style.display="none";
+}
 
 });
 
