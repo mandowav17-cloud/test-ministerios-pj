@@ -446,7 +446,6 @@ html2canvas(card, {
 scale: 3,
 backgroundColor: colorActual,
 useCORS: true
-})
 }).then(canvas => {
 
 const link = document.createElement("a");
